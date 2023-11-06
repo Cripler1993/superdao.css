@@ -1,0 +1,217 @@
+/* обнуляем все настройки по умолчанию */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* меняет подсчет ширины блока для удобства */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* убираем линии обводки у браузеров */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+/* делаем значения блочными */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+/* уравниваем поведение шрифтов и элементов для разных браузеров */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -mos-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #0a1117;
+}
+/* просим теги наследовать семейство шрифта */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+/* убираем некоторые особенности в разных браузерах
+  специфический псевдоэлемент */
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+/* специфический псевдоэлемент */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* обнуляем заголовки h */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* header */
+header {
+  margin-top: 30px;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav img {
+  margin-right: 112px;
+}
+.header__row {
+  display: flex;
+  column-gap: 44px;
+  margin-right: 212px;
+}
+.header__row p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.header__row p::first-letter {
+  text-transform: capitalize;
+}
+.header__btn {
+  padding: 11px 20px;
+  border-radius: 12px;
+  background: #243241;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+/* greetings */
+.greetings {
+  margin-top: 162px;
+  margin-bottom: 64.5px;
+}
+.greetings__column {
+  text-align: center;
+  color: #fff;
+  max-width: 649px;
+  margin: 0 auto;
+}
+.greetings__column h1 {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.greetings__column h1::first-letter {
+  text-transform: capitalize;
+}
+.greetings__column p {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 56px;
+  line-height: 46px;
+}
+.greetings__column p::first-letter {
+  text-transform: capitalize;
+}
+.greetings__column button {
+  padding: 16px 48px;
+  border-radius: 16px;
+  background: #ffcf01;
+  box-shadow: 0px 9px 44px 0px rgba(255, 207, 1, 0.2);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 118.5px;
+}
+.greetings__column button::first-letter {
+  text-transform: capitalize;
+}
+.tick {
+  text-align: center;
+}
+/* project */
+
+.project__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+.project__title-text {
+  color: #e5e5e5;
+  font-size: 54px;
+  font-weight: 700;
+}
+.project__title-text::first-letter {
+  text-transform: capitalize;
+}
+.project__btns {
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+  margin-bottom: 24px;
+}
+.project__btns button {
+  padding: 8px 26px;
+  border-radius: 100px;
+  background: #182632;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.project__btns-secondRow {
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+  margin-bottom: 44px;
+}
+.project__btns-secondRow button {
+  padding: 8px 26px;
+  border-radius: 100px;
+  background: #182632;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.project__results {
+}
