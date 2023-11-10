@@ -83,6 +83,13 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+.text {
+  font-size: 22px;
+  font-weight: 700;
+}
+.text::first-letter {
+  text-transform: capitalize;
+}
 
 /* header */
 header {
@@ -314,6 +321,9 @@ header {
 }
 
 /* works with */
+.works__with {
+  margin-bottom: 200px;
+}
 
 .works__with-title {
   display: flex;
@@ -332,7 +342,111 @@ header {
   border: 2px solid #2a3744;
   background: #121e28;
 }
-.blue:hover {
-  padding: 0px;
-  box-shadow: 0px 0px 47px 0px rgba(98, 126, 234, 0.3);
+.works__with-text {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 16px;
+  color: #e5e5e5;
+  font-size: 22px;
+  font-weight: 600;
+}
+/* help */
+.help {
+  margin-bottom: 194px;
+}
+.photo__row {
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+  margin-top: 44px;
+  margin-bottom: 70px;
+}
+.help__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 28px;
+  margin-bottom: 20px;
+}
+.help__row img {
+  object-fit: none;
+}
+.help__row p {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+}
+.help__row p::first-letter {
+  text-transform: capitalize;
+}
+/* press */
+.press {
+  margin-bottom: 210px;
+}
+.press__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+.row__left {
+  position: relative;
+}
+.row__left .title__text {
+  margin-right: 19px;
+}
+.row__left img {
+  position: absolute;
+  top: -58px;
+  right: -19px;
+}
+.row__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+.row__right .text {
+  color: #8395a7;
+}
+/* не работает space between */
+.press__item-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 28px;
+}
+.press__item {
+  padding: 30px 28px 32px 28px;
+  border-radius: 20px;
+}
+.press__item img {
+  margin-bottom: 21px;
+}
+.press__item .text {
+  line-height: 30px;
+}
+.item__sub-text {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  line-height: 29px;
+}
+.item__sub-text::first-letter {
+  text-transform: capitalize;
+}
+/* не работает align items на стрелку */
+.item__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  column-gap: 8px;
+}
+
+.item__footer p {
+  font-weight: 700;
+  font-size: 16px;
+}
+.item__footer p::first-letter {
+  text-transform: capitalize;
 }
