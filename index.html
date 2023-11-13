@@ -115,7 +115,7 @@
           <div class="section__column">
             <div class="works__with-title">
               <p class="title__text">works with</p>
-              <img src="./img/bunch of stars3.svg" alt="" />
+              <img src="./img/bunch of stars4.svg" alt="" />
             </div>
             <div class="works__with-row">
               <div>
@@ -194,11 +194,27 @@
           </div>
         </div>
       </section>
-      <section>
-        <!-- это инпут или див? -->
+      <section class="digest">
+        <div class="container">
+          <div class="digest__container">
+            <div class="digest__title">
+              <p class="title__text">weekly digest</p>
+              <p class="digest__text">latest news in DAOs and Web3</p>
+            </div>
+            <div class="digest__form">
+              <div class="digest__input"><input type="text" /></div>
+              <button>subscribe</button>
+            </div>
+          </div>
+        </div>
       </section>
-      <section>
-        <!-- как сделать элементы прозрачными? -->
+      <section class="backed">
+        <div class="section__column">
+          <div class="backed__title">
+            <p class="title__text">backed by</p>
+            <img src="./img/bunch of stars5.svg" alt="" />
+          </div>
+        </div>
       </section>
       <section class="press">
         <div class="container">
@@ -274,35 +290,41 @@
           </div>
           <div class="podcasts__item-container">
             <div class="podcasts__item">
-              <img src="./img/podcasts/pomp podcast.svg" alt="" />
-              <p class="text__20px">understanding DAOs with Yury Lifshits</p>
-              <p class="podcasts__sub-text">the pomp podcast</p>
-              <p class="podcasts__sub-text">by anthony pompliano</p>
+              <div>
+                <img src="./img/podcasts/pomp podcast.svg" alt="" />
+                <p class="text__20px">understanding DAOs with Yury Lifshits</p>
+                <p class="podcasts__sub-text">the pomp podcast</p>
+                <p class="podcasts__sub-text">by anthony pompliano</p>
+              </div>
               <div class="podcasts__footer">
                 <p>listen</p>
                 <img src="./img/podcasts/white arrow.svg" alt="" />
               </div>
             </div>
             <div class="podcasts__item">
-              <img src="./img/podcasts/unstopable.svg" alt="" />
-              <p class="text__20px">
-                Everything You Need to Know About DAOs with Yury Lifshits from
-                Superdao
-              </p>
-              <p class="podcasts__sub-text">the unstoppable podcast</p>
-              <p class="podcasts__sub-text">by josh gordon</p>
+              <div>
+                <img src="./img/podcasts/unstopable.svg" alt="" />
+                <p class="text__20px">
+                  Everything You Need to Know About DAOs with Yury Lifshits from
+                  Superdao
+                </p>
+                <p class="podcasts__sub-text">the unstoppable podcast</p>
+                <p class="podcasts__sub-text">by josh gordon</p>
+              </div>
               <div class="podcasts__footer">
                 <p>watch</p>
                 <img src="./img/podcasts/white arrow.svg" alt="" />
               </div>
             </div>
             <div class="podcasts__item">
-              <img src="./img/podcasts/zima.svg" alt="" />
-              <p class="text__20px">
-                Yury Lifshits - Superdao: The “Shopify” for DAOs
-              </p>
-              <p class="podcasts__sub-text">zima red</p>
-              <p class="podcasts__sub-text">by andrew stainwold</p>
+              <div>
+                <img src="./img/podcasts/zima.svg" alt="" />
+                <p class="text__20px">
+                  Yury Lifshits - Superdao: The “Shopify” for DAOs
+                </p>
+                <p class="podcasts__sub-text">zima red</p>
+                <p class="podcasts__sub-text">by andrew stainwold</p>
+              </div>
               <div class="podcasts__footer">
                 <p>listen</p>
                 <img src="./img/podcasts/white arrow.svg" alt="" />
@@ -313,32 +335,63 @@
       </section>
       <section class="idea">
         <div class="container">
-          <div class="idea__img">
-            <img src="./img/bunch of stars 8.svg" alt="" />
-          </div>
-          <div>
-            <p class="title__text">what's your DAO idea?</p>
-            <p>let’s chat and see how we can help</p>
-          </div>
-          <div class="idea__btns">
-            <div>
-              <div><img src="./img/idea/Icon_telegram.svg" alt="" /></div>
-              <div>
-                <p>telegram</p>
-                <p>@superdao_team</p>
-              </div>
+          <div class="section__column">
+            <div class="idea__img">
+              <img src="./img/bunch of stars 8.svg" alt="" />
             </div>
-            <div>
-              <div><img src="./img/idea/Union.svg" alt="" /></div>
-              <div>
-                <p>email</p>
-                <p>hello@superdao.co</p>
+            <div class="idea__title">
+              <p class="title__text">what's your DAO idea?</p>
+              <p class="idea__text">let’s chat and see how we can help</p>
+            </div>
+            <div class="idea__btns">
+              <div class="idea__btns-item yellow">
+                <div class="idea__img-container">
+                  <img src="./img/idea/Icon_telegram.svg" alt="" />
+                </div>
+                <div>
+                  <p class="text__20px" style="color: #4d3705">telegram</p>
+                  <p class="idea__link">@superdao_team</p>
+                </div>
+              </div>
+              <div class="idea__btns-item violet">
+                <div class="idea__img-container">
+                  <img src="./img/idea/Union.svg" alt="" />
+                </div>
+                <div>
+                  <p class="text__20px" style="color: #4d3705">email</p>
+                  <p class="idea__link">hello@superdao.co</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <div class="footer__row">
+          <div><img src="./img/footer/superdao1.png" alt="" /></div>
+          <div class="footer__nav">
+            <p class="text">about</p>
+            <p class="text">jobs</p>
+            <p class="text">legal</p>
+          </div>
+          <div class="links__row">
+            <div style="background-color: rgba(119, 230, 255, 0.15)">
+              <a href=""><img src="./img/footer/twitter.svg" alt="" /></a>
+            </div>
+            <div style="background-color: rgba(119, 149, 255, 0.15)">
+              <a href=""><img src="./img/footer/telegram.svg" alt="" /></a>
+            </div>
+            <div style="background-color: rgba(247, 135, 135, 0.15)">
+              <a href=""> <img src="./img/footer/youtube.svg" alt="" /></a>
+            </div>
+            <div style="background-color: rgba(146, 119, 255, 0.15)">
+              <a href=""><img src="./img/footer/discord.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
