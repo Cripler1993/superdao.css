@@ -120,12 +120,12 @@ header {
   column-gap: 44px;
   margin-right: 212px;
 }
-.header__row p {
+.header__row a {
   font-size: 20px;
   font-weight: 600;
   color: #fff;
 }
-.header__row p::first-letter {
+.header__row a::first-letter {
   text-transform: capitalize;
 }
 .header__btn {
@@ -182,6 +182,59 @@ header {
 }
 .tick {
   text-align: center;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 736px;
+  }
+  .header__nav img {
+    width: 140px;
+    height: 23px;
+    margin-right: 55px;
+  }
+  .header__row {
+    column-gap: 24px;
+    margin-right: 128px;
+  }
+  .header__row a {
+    font-size: 14px;
+  }
+  .header__btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  /* greetings */
+  .greetings {
+    margin-top: 106px;
+    margin-bottom: 56px;
+  }
+  .greetings__column {
+    max-width: 500px;
+  }
+  .greetings__column h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+  .greetings__column p {
+    font-size: 20px;
+    margin-bottom: 44px;
+    line-height: 34px;
+  }
+  .greetings__column button {
+    padding: 13px 38px;
+    font-size: 17px;
+    margin-bottom: 64px;
+  }
+  .tick img {
+    width: 16.5px;
+    height: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 400px;
+  }
 }
 /* project */
 .project {
@@ -264,6 +317,38 @@ header {
   font-size: 18px;
   font-weight: 700;
 }
+/* доделать звездочки */
+@media (max-width: 1200px) {
+  .project {
+    margin-bottom: 82px;
+  }
+  .project__btns {
+    column-gap: 12px;
+    margin-bottom: 20px;
+  }
+  .project__btns button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .project__btns-secondRow {
+    column-gap: 12px;
+  }
+  .project__btns-secondRow button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .project__img img {
+    max-width: 736px;
+    max-height: 318px;
+  }
+  .project__results {
+    padding: 2px 20px;
+    border-radius: 100px;
+    border: 3px solid #0a1117;
+    font-size: 16px;
+    bottom: -10px;
+  }
+}
 /* full journey */
 .full__journey {
   margin-bottom: 200px;
@@ -296,6 +381,18 @@ header {
 .journey__column p:hover {
   color: #23c9de;
   cursor: pointer;
+}
+/* доделать звездочки */
+@media (max-width: 1200px) {
+  .journey__title {
+    margin-bottom: 16px;
+  }
+  .journey__column {
+    row-gap: 18px;
+  }
+  .journey__column p {
+    font-size: 32px;
+  }
 }
 /* tools app */
 .tools__app {
@@ -380,6 +477,64 @@ header {
   color: #e5e5e5;
   font-size: 22px;
   font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .app__menu {
+    column-gap: 27px;
+    margin-bottom: 28px;
+  }
+  .app__menu p {
+    font-size: 16px;
+  }
+  .app__img {
+    margin-bottom: 32px;
+  }
+  .app__img img {
+    max-width: 657px;
+    max-height: 460px;
+  }
+  .app__btn {
+    padding: 10px 44px;
+    font-size: 17px;
+  }
+  /* works with */
+  .works__with-row {
+    column-gap: 27px;
+  }
+  .works__with-text {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .app__menu {
+    column-gap: 8px;
+    row-gap: 12px;
+    flex-wrap: wrap;
+  }
+  .app__menu p {
+    font-size: 14px;
+  }
+  .app__img {
+    margin-bottom: 24px;
+  }
+  .app__img img {
+    max-width: 400px;
+    max-height: 280px;
+  }
+  .app__btn {
+    padding: 4px 30px;
+    font-size: 15px;
+  }
+  /* works with */
+  .works__with-row {
+    column-gap: 28px;
+    row-gap: 28px;
+    flex-wrap: wrap;
+  }
+  .works__with-text {
+    font-size: 12px;
+  }
 }
 /* help */
 .help {
@@ -466,6 +621,32 @@ header {
   font-size: 20px;
   font-weight: 600;
 }
+@media (max-width: 1200px) {
+  .help {
+    margin-bottom: 100px;
+  }
+  .photo__row {
+    column-gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 37px;
+  }
+  .photo__row img {
+    width: 112px;
+    height: 112px;
+  }
+  .help__row {
+    column-gap: 16px;
+  }
+  .help__row img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
+  .help__row p {
+    font-size: 32px;
+  }
+  /* digest */
+}
 /* backed */
 .backed {
   margin-bottom: 200px;
@@ -481,13 +662,20 @@ header {
   right: -93px;
 }
 .backed__container {
-  margin-top: 56px;
   position: relative;
   z-index: 0;
+  max-width: 1920px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .backed__first-row {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
 }
 .first__row-item {
   height: 132px;
@@ -502,7 +690,7 @@ header {
 
 .backed__second-row {
   display: flex;
-  justify-content: space-between;
+  gap: 36px;
 }
 .second__row-item {
   height: 114px;
@@ -788,4 +976,14 @@ footer {
 }
 .hidden {
   display: none;
+}
+@media (max-width: 1200px) {
+  .title__text {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .title__text {
+    font-size: 28px;
+  }
 }

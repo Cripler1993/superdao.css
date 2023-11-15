@@ -9,3 +9,5 @@ modalOpen.onclick = function () {
 modalClose.addEventListener("click", function () {
   modalWrapper.classList.add("hidden");
 });
+
+// eventlistner. event(на вход), event.target != modalOpen
