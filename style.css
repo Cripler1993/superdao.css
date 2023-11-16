@@ -478,6 +478,7 @@ header {
   font-size: 22px;
   font-weight: 600;
 }
+/* звездочки доделать */
 @media (max-width: 1200px) {
   .app__menu {
     column-gap: 27px;
@@ -498,12 +499,23 @@ header {
     font-size: 17px;
   }
   /* works with */
+  .works__with {
+    margin-bottom: 100px;
+  }
   .works__with-row {
     column-gap: 27px;
   }
   .works__with-text {
     margin-top: 12px;
     font-size: 14px;
+  }
+  .works__with-item {
+    border-radius: 24px;
+  }
+  /* !сильно маленькое изображение */
+  .works__with-item img {
+    width: 44px;
+    height: 44px;
   }
 }
 @media (max-width: 768px) {
@@ -646,7 +658,27 @@ header {
     font-size: 32px;
   }
   /* digest */
+  .digest {
+    margin-bottom: 100px;
+  }
+  .digest__container {
+    padding: 36px 111px 48px 110px;
+  }
+  .digest__text {
+    color: #9aafc3;
+    font-size: 28px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+  .digest__input input {
+    padding: 18px 0px 18px 24px;
+  }
+  .digest__form button {
+    padding: 12px 32px;
+    border-radius: 16px;
+  }
 }
+/* ! нужно ли что то делать с backed?? */
 /* backed */
 .backed {
   margin-bottom: 200px;
@@ -723,6 +755,11 @@ header {
   right: 0px;
   z-index: 1;
 }
+@media (max-width: 1200px) {
+  .backed {
+    margin-bottom: 100px;
+  }
+}
 /* press */
 .press {
   margin-bottom: 210px;
@@ -758,6 +795,9 @@ header {
   column-gap: 28px;
 }
 .press__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 30px 28px 32px 28px;
   border-radius: 20px;
 }
@@ -790,7 +830,40 @@ header {
   font-size: 16px;
   text-transform: capitalize;
 }
+@media (max-width: 1200px) {
+  .press {
+    margin-bottom: 100px;
+  }
+  .press__title-row {
+    margin-bottom: 28px;
+  }
+  .row__right {
+    column-gap: 8px;
+  }
+  .press__item-container {
+    column-gap: 20px;
+  }
+  .press__item {
+    padding: 20px;
+    max-width: 232px;
+  }
+  .press__item .text {
+    line-height: 24px;
+  }
+  .item__sub-text {
+    font-size: 13px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    line-height: 22px;
+  }
+  .item__footer {
+    column-gap: 6px;
+  }
 
+  .item__footer p {
+    font-size: 12px;
+  }
+}
 /* podcasts */
 .podcasts {
   margin-bottom: 120px;
@@ -980,6 +1053,9 @@ footer {
 @media (max-width: 1200px) {
   .title__text {
     font-size: 36px;
+  }
+  .text {
+    font-size: 18px;
   }
 }
 @media (max-width: 768px) {
