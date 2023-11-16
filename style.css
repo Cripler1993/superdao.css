@@ -317,10 +317,16 @@ header {
   font-size: 18px;
   font-weight: 700;
 }
-/* доделать звездочки */
+
 @media (max-width: 1200px) {
   .project {
     margin-bottom: 82px;
+  }
+  .project__title img {
+    width: 60.999px;
+    height: 61.817px;
+    top: -35px;
+    left: -111px;
   }
   .project__btns {
     column-gap: 12px;
@@ -382,10 +388,16 @@ header {
   color: #23c9de;
   cursor: pointer;
 }
-/* доделать звездочки */
+
 @media (max-width: 1200px) {
   .journey__title {
     margin-bottom: 16px;
+  }
+  .journey__title img {
+    width: 50.001px;
+    height: 37.416px;
+    top: -30px;
+    right: -56px;
   }
   .journey__column {
     row-gap: 18px;
@@ -470,6 +482,7 @@ header {
   border: 2px solid #2a3744;
   background: #121e28;
 }
+
 .works__with-text {
   text-align: center;
   text-transform: capitalize;
@@ -480,6 +493,18 @@ header {
 }
 /* звездочки доделать */
 @media (max-width: 1200px) {
+  .works__with {
+    margin-bottom: 110px;
+  }
+  .works__with-title {
+    margin-bottom: 32px;
+  }
+  .tools__app-title img {
+    width: 40px;
+    height: 31.762px;
+    top: -32px;
+    left: -43px;
+  }
   .app__menu {
     column-gap: 27px;
     margin-bottom: 28px;
@@ -847,6 +872,10 @@ header {
     padding: 20px;
     max-width: 232px;
   }
+  .press__item img:first-child {
+    width: 192px;
+    height: 38px;
+  }
   .press__item .text {
     line-height: 24px;
   }
@@ -925,6 +954,33 @@ header {
   font-weight: 700;
   text-transform: capitalize;
 }
+@media (max-width: 1200px) {
+  .podcasts {
+    margin-bottom: 73px;
+  }
+  .podcasts__item-container {
+    column-gap: 20px;
+  }
+  .podcasts__item {
+    max-width: 232px;
+    padding: 24px 20px 20px 20px;
+  }
+  .podcasts__item .text__20px {
+    line-height: 24px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+  .podcasts__sub-text {
+    font-size: 14px;
+  }
+  .podcasts__footer {
+    column-gap: 6px;
+    margin-top: 20px;
+  }
+  .podcasts__footer p {
+    font-size: 12px;
+  }
+}
 /* idea */
 .idea {
   margin-bottom: 200px;
@@ -978,6 +1034,35 @@ header {
   font-weight: 500;
   opacity: 0.7;
 }
+@media (max-width: 1200px) {
+  .idea {
+    margin-bottom: 120px;
+  }
+  .idea__img {
+    margin-bottom: 49px;
+  }
+  .idea__img img {
+    width: 43.001px;
+    height: 49.143px;
+  }
+  .idea__text {
+    margin-top: 20px;
+    color: #5a6c7e;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .idea__btns {
+    margin-top: 42px;
+    column-gap: 24px;
+  }
+  .idea__btns-item {
+    padding: 10px 32px 10px 10px;
+    column-gap: 16px;
+  }
+  .idea__link {
+    font-size: 14px;
+  }
+}
 /* footer */
 footer {
   background-color: #121e28;
@@ -1013,6 +1098,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* !логотоип встает немного не ровно */
+@media (max-width: 1200px) {
+  footer {
+    background-color: #121e28;
+    padding: 41px 0px 46px 0px;
+  }
+  .footer__logo {
+    width: 170px;
+    height: 28.243px;
+  }
+  .footer__nav {
+    column-gap: 36px;
+  }
+  .links__row {
+    column-gap: 12px;
+  }
+  .links__row div {
+    width: 44px;
+    height: 44px;
+  }
+  .footer__img {
+    width: 24px;
+    height: 24px;
+  }
 }
 /* modal wrapper */
 .modal__wrapper {
@@ -1056,6 +1166,9 @@ footer {
   }
   .text {
     font-size: 18px;
+  }
+  .text__20px {
+    font-size: 17px;
   }
 }
 @media (max-width: 768px) {
