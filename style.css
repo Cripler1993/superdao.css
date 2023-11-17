@@ -390,6 +390,9 @@ header {
 }
 
 @media (max-width: 1200px) {
+  .full__journey {
+    margin-bottom: 100px;
+  }
   .journey__title {
     margin-bottom: 16px;
   }
@@ -493,10 +496,10 @@ header {
 }
 /* звездочки доделать */
 @media (max-width: 1200px) {
-  .works__with {
+  .tools__app {
     margin-bottom: 110px;
   }
-  .works__with-title {
+  .tools__app-title {
     margin-bottom: 32px;
   }
   .tools__app-title img {
@@ -527,6 +530,16 @@ header {
   .works__with {
     margin-bottom: 100px;
   }
+
+  .works__with-title {
+    margin-bottom: 32px;
+  }
+  .works__with-title img {
+    width: 34.999px;
+    height: 27.364px;
+    top: -20px;
+    right: -45px;
+  }
   .works__with-row {
     column-gap: 27px;
   }
@@ -537,10 +550,14 @@ header {
   .works__with-item {
     border-radius: 24px;
   }
-  /* !сильно маленькое изображение */
+  .works__with-item {
+    padding: 0px;
+    width: 100px;
+    height: 100px;
+  }
+
   .works__with-item img {
-    width: 44px;
-    height: 44px;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -703,7 +720,6 @@ header {
     border-radius: 16px;
   }
 }
-/* ! нужно ли что то делать с backed?? */
 /* backed */
 .backed {
   margin-bottom: 200px;
@@ -784,6 +800,45 @@ header {
   .backed {
     margin-bottom: 100px;
   }
+  .backed__title img {
+    width: 52.999px;
+    height: 40.767px;
+    top: -25px;
+    right: -73px;
+  }
+  .backed__container {
+    max-width: 960px;
+    margin-top: 36px;
+  }
+  .backed__first-row {
+    gap: 24px;
+  }
+  .first__row-item {
+    height: 88px;
+    padding: 0px 28px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  /* .first__row-item img {
+    width: 100%;
+  } */
+  .backed__second-row {
+    display: flex;
+    gap: 24px;
+  }
+  .second__row-item {
+    height: 75px;
+    padding: 0px 28px;
+    border-radius: 16px;
+  }
+  .linear__gradient-left {
+    width: 260px;
+    height: 187px;
+  }
+  .linear__gradient-right {
+    width: 260px;
+    height: 187px;
+  }
 }
 /* press */
 .press {
@@ -858,6 +913,12 @@ header {
 @media (max-width: 1200px) {
   .press {
     margin-bottom: 100px;
+  }
+  .row__left img {
+    width: 45.001px;
+    height: 45.776px;
+    top: -30px;
+    right: -68px;
   }
   .press__title-row {
     margin-bottom: 28px;
@@ -1099,7 +1160,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-/* !логотоип встает немного не ровно */
+
 @media (max-width: 1200px) {
   footer {
     background-color: #121e28;
@@ -1108,6 +1169,8 @@ footer {
   .footer__logo {
     width: 170px;
     height: 28.243px;
+    position: relative;
+    top: -3px;
   }
   .footer__nav {
     column-gap: 36px;
