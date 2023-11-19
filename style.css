@@ -232,8 +232,36 @@ header {
   }
 }
 @media (max-width: 768px) {
+  header {
+    display: none;
+  }
   .container {
     max-width: 400px;
+  }
+
+  /* greetings */
+  .greetings {
+    margin-top: 96px;
+    margin-bottom: 100px;
+  }
+  .greetings__column {
+    max-width: 314px;
+  }
+  .greetings__column h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  .greetings__column p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 28px;
+  }
+  .greetings__column button {
+    padding: 8px 28px;
+    font-size: 15px;
+  }
+  .tick img {
+    display: none;
   }
 }
 /* project */
@@ -343,16 +371,60 @@ header {
     padding: 8px 24px;
     font-size: 16px;
   }
+  .project__btn img {
+    width: 14px;
+    height: 14px;
+  }
   .project__img img {
     max-width: 736px;
     max-height: 318px;
   }
   .project__results {
     padding: 2px 20px;
-    border-radius: 100px;
-    border: 3px solid #0a1117;
     font-size: 16px;
     bottom: -10px;
+  }
+}
+@media (max-width: 768px) {
+  .project {
+    margin-bottom: 68px;
+  }
+  .project__title {
+    margin-bottom: 24px;
+  }
+
+  .project__title img {
+    width: 37.997px;
+    height: 38.509px;
+    top: -30px;
+    left: 10px;
+  }
+  .project__btns {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .project__btns button {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  .project__btns-secondRow {
+    column-gap: 12px;
+  }
+  .project__btns-secondRow button {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  .project__btn img {
+    width: 10px;
+    height: 10px;
+  }
+  .project__img img {
+    max-width: 400px;
+    max-height: 328px;
+  }
+  .project__results {
+    padding: 2px 12px;
+    font-size: 13px;
   }
 }
 /* full journey */
@@ -391,7 +463,7 @@ header {
 
 @media (max-width: 1200px) {
   .full__journey {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
   .journey__title {
     margin-bottom: 16px;
@@ -407,6 +479,23 @@ header {
   }
   .journey__column p {
     font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .journey__title {
+    margin-bottom: 24px;
+  }
+  .journey__title img {
+    width: 28.996px;
+    height: 21.702px;
+    top: -20px;
+    right: 20px;
+  }
+  .journey__column {
+    row-gap: 15px;
+  }
+  .journey__column p {
+    font-size: 20px;
   }
 }
 /* tools app */
@@ -494,7 +583,7 @@ header {
   font-size: 22px;
   font-weight: 600;
 }
-/* звездочки доделать */
+
 @media (max-width: 1200px) {
   .tools__app {
     margin-bottom: 110px;
@@ -525,6 +614,10 @@ header {
   .app__btn {
     padding: 10px 44px;
     font-size: 17px;
+  }
+  .app__btn img {
+    width: 28px;
+    height: 28px;
   }
   /* works with */
   .works__with {
@@ -561,6 +654,18 @@ header {
   }
 }
 @media (max-width: 768px) {
+  .tools__app {
+    margin-bottom: 80px;
+  }
+  .tools__app-title {
+    margin-bottom: 24px;
+  }
+  .tools__app-title img {
+    width: 27px;
+    height: 21.44px;
+    top: -18px;
+    left: -33px;
+  }
   .app__menu {
     column-gap: 8px;
     row-gap: 12px;
@@ -580,7 +685,24 @@ header {
     padding: 4px 30px;
     font-size: 15px;
   }
+  .app__btn img {
+    width: 24px;
+    height: 24px;
+  }
   /* works with */
+  .works__with {
+    margin-bottom: 80px;
+  }
+
+  .works__with-title {
+    margin-bottom: 24px;
+  }
+  .works__with-title img {
+    width: 26.001px;
+    height: 20.327px;
+    top: -20px;
+    right: -25px;
+  }
   .works__with-row {
     column-gap: 28px;
     row-gap: 28px;
@@ -588,6 +710,11 @@ header {
   }
   .works__with-text {
     font-size: 12px;
+  }
+  .works__with-item {
+    padding: 0px;
+    width: 84px;
+    height: 84px;
   }
 }
 /* help */
@@ -707,17 +834,74 @@ header {
     padding: 36px 111px 48px 110px;
   }
   .digest__text {
-    color: #9aafc3;
     font-size: 28px;
     margin-top: 16px;
     margin-bottom: 48px;
   }
+
   .digest__input input {
     padding: 18px 0px 18px 24px;
   }
   .digest__form button {
     padding: 12px 32px;
     border-radius: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .help {
+    margin-bottom: 95px;
+  }
+  .photo__row {
+    column-gap: 10px;
+    margin-top: 22px;
+    margin-bottom: 23px;
+  }
+  .photo__row img {
+    width: 73px;
+    height: 73px;
+  }
+  .help__row {
+    column-gap: 10px;
+  }
+  .help__row img {
+    width: 13px;
+    height: 13px;
+    object-fit: cover;
+  }
+  .help__row p {
+    font-size: 18px;
+  }
+  /* digest */
+  .digest {
+    margin-bottom: 100px;
+  }
+  .digest__container {
+    padding: 28px 24px 24px 24px;
+  }
+  .digest__text {
+    font-size: 19px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  .digest__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 16px;
+  }
+  .digest__input {
+    width: 100%;
+  }
+  .digest__input input {
+    padding: 13px 0px 13px 18px;
+  }
+  .digest__input input::placeholder {
+    font-size: 14px;
+  }
+  .digest__form button {
+    padding: 10px 0px;
+    border-radius: 10px;
+    font-size: 14px;
   }
 }
 /* backed */
@@ -823,7 +1007,6 @@ header {
     width: 100%;
   } */
   .backed__second-row {
-    display: flex;
     gap: 24px;
   }
   .second__row-item {
@@ -954,6 +1137,41 @@ header {
     font-size: 12px;
   }
 }
+@media (max-width: 768px) {
+  .press {
+    margin-bottom: 80px;
+  }
+  .row__left img {
+    width: 31.839px;
+    height: 32.388px;
+    top: -25px;
+    right: -45px;
+  }
+  .press__title-row {
+    margin-bottom: 24px;
+  }
+  .press__item-container {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .press__item {
+    padding: 20px;
+    max-width: 400px;
+  }
+  .press__item img:first-child {
+    width: 192px;
+    height: 38px;
+  }
+  .item__sub-text {
+    margin-bottom: 19px;
+  }
+  .item__footer {
+    column-gap: 8px;
+  }
+  .item__footer p {
+    font-size: 14px;
+  }
+}
 /* podcasts */
 .podcasts {
   margin-bottom: 120px;
@@ -1019,6 +1237,12 @@ header {
   .podcasts {
     margin-bottom: 73px;
   }
+  .podcasts__row-left img {
+    width: 43.997px;
+    height: 39.074px;
+    top: -67px;
+    left: -93px;
+  }
   .podcasts__item-container {
     column-gap: 20px;
   }
@@ -1040,6 +1264,29 @@ header {
   }
   .podcasts__footer p {
     font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .podcasts {
+    margin-bottom: 81px;
+  }
+  .podcasts__title-row {
+    margin-bottom: 24px;
+  }
+  .podcasts__item-container {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .podcasts__item {
+    max-width: 400px;
+    padding: 24px 20px 20px 20px;
+  }
+  .podcasts__footer {
+    column-gap: 8px;
+    margin-top: 17px;
+  }
+  .podcasts__footer p {
+    font-size: 14px;
   }
 }
 /* idea */
@@ -1108,9 +1355,7 @@ header {
   }
   .idea__text {
     margin-top: 20px;
-    color: #5a6c7e;
     font-size: 30px;
-    font-weight: 700;
   }
   .idea__btns {
     margin-top: 42px;
@@ -1122,6 +1367,43 @@ header {
   }
   .idea__link {
     font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .idea {
+    margin-bottom: 80px;
+  }
+  .idea__img {
+    margin-bottom: 25px;
+  }
+  .idea__img img {
+    width: 34.999px;
+    height: 39.998px;
+  }
+  .idea__text {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  .idea__btns {
+    flex-direction: column;
+    margin-top: 32px;
+    row-gap: 16px;
+  }
+  .idea__btns-item {
+    padding: 8px 28px 8px 8px;
+    column-gap: 12px;
+    justify-content: flex-start;
+  }
+  .idea__link {
+    font-size: 12px;
+  }
+  .idea__img-container {
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .idea__img-container img {
+    width: 23.692px;
+    height: 23.692px;
   }
 }
 /* footer */
@@ -1163,7 +1445,6 @@ footer {
 
 @media (max-width: 1200px) {
   footer {
-    background-color: #121e28;
     padding: 41px 0px 46px 0px;
   }
   .footer__logo {
@@ -1185,6 +1466,34 @@ footer {
   .footer__img {
     width: 24px;
     height: 24px;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 32px 0px;
+  }
+  .footer__row {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 32px;
+  }
+  .footer__logo {
+    width: 127px;
+    height: 21.099px;
+    top: 0px;
+  }
+  .footer__nav {
+    column-gap: 40px;
+  }
+  .footer__nav .text {
+    font-size: 14px;
+  }
+  .links__row {
+    column-gap: 20px;
+  }
+  .links__row div {
+    width: 40px;
+    height: 40px;
   }
 }
 /* modal wrapper */
@@ -1238,4 +1547,18 @@ footer {
   .title__text {
     font-size: 28px;
   }
+  .block {
+    display: block;
+    text-align: center;
+    margin-bottom: 3px;
+  }
 }
+/* !блоки backed и звезда на предпослед секции остались 1200px */
+
+/* ! podcasts верхний блок не дорастягивается, 
+! фото людей съедает. норм ли что перенос не так как на макете help at evr,
+! картинка ready for every proj, 
+!точки all the tools, 
+!input по высоте больше чем кнопка digest 768px */
+
+/* !press нужно ли заморачиваться с размером изображений у каждого свое на 1200 и 768 */
