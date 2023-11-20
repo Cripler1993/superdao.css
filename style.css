@@ -40,6 +40,7 @@ body {
   -mos-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-color: #0a1117;
+  font-family: "Montserrat", sans-serif;
 }
 /* просим теги наследовать семейство шрифта */
 input,
@@ -137,6 +138,21 @@ header {
   color: #fff;
   text-transform: capitalize;
 }
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16px;
+  height: 18px;
+  cursor: pointer;
+}
+.header__burger div {
+  height: 3px;
+  background-color: #ffcf01;
+  width: 16px;
+  border-radius: 13px;
+}
+
 /* greetings */
 .greetings {
   margin-top: 162px;
@@ -184,6 +200,9 @@ header {
   text-align: center;
 }
 @media (max-width: 1200px) {
+  header {
+    margin-top: 28px;
+  }
   .container {
     max-width: 736px;
   }
@@ -233,12 +252,28 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    display: none;
+    margin-top: 16px;
   }
   .container {
     max-width: 400px;
   }
-
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav img {
+    margin-right: 0px;
+  }
+  .header__row {
+    display: none;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__burger {
+    display: flex;
+  }
   /* greetings */
   .greetings {
     margin-top: 96px;
@@ -262,6 +297,93 @@ header {
   }
   .tick img {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .burger__menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #121e28;
+    z-index: 1;
+  }
+  .burger__header {
+    padding: 16px 16px 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 46px;
+  }
+  .burger__header img:first-child {
+    width: 140px;
+    height: 23.235px;
+  }
+  .burger__header img:last-child {
+    cursor: pointer;
+  }
+  .burger__column {
+    padding: 0px 20px 20px 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+  .burger__input {
+    max-width: 320px;
+    margin-bottom: 32px;
+  }
+  .burger__input input {
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+    border-radius: 10px;
+    background: rgba(255, 200, 3, 0.2);
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffc803;
+    line-height: 32px;
+  }
+  .burger__input input::placeholder {
+    text-transform: capitalize;
+    color: #ffc803;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .burger__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-bottom: 126px;
+  }
+  .burger__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px;
+    max-width: 320px;
+    border-radius: 10px;
+    background: #182632;
+  }
+  .burger__item span:first-child {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .burger__item span:first-child::first-letter {
+    text-transform: capitalize;
+  }
+  .burger__footer {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 28px;
+  }
+  .burger__footer div {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 /* project */
@@ -532,6 +654,9 @@ header {
   color: #ffc803;
   cursor: pointer;
 }
+.tools__point {
+  display: none;
+}
 .app__img {
   margin-bottom: 44px;
 }
@@ -604,6 +729,7 @@ header {
   .app__menu p {
     font-size: 16px;
   }
+
   .app__img {
     margin-bottom: 32px;
   }
@@ -669,10 +795,16 @@ header {
   .app__menu {
     column-gap: 8px;
     row-gap: 12px;
+    max-width: 320px;
     flex-wrap: wrap;
   }
   .app__menu p {
     font-size: 14px;
+  }
+  .tools__point {
+    display: block;
+    color: #8395a7;
+    opacity: 0.6;
   }
   .app__img {
     margin-bottom: 24px;
@@ -793,6 +925,7 @@ header {
   font-size: 20px;
   color: #3d4c5b;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .digest__form button {
   padding: 16px 35px 16px 37px;
@@ -841,6 +974,7 @@ header {
 
   .digest__input input {
     padding: 18px 0px 18px 24px;
+    font-size: 14px;
   }
   .digest__form button {
     padding: 12px 32px;
@@ -1000,12 +1134,13 @@ header {
   .first__row-item {
     height: 88px;
     padding: 0px 28px;
+    min-width: 144px;
     border-radius: 20px;
     margin-bottom: 24px;
   }
-  /* .first__row-item img {
+  .first__row-item img {
     width: 100%;
-  } */
+  }
   .backed__second-row {
     gap: 24px;
   }
@@ -1118,7 +1253,6 @@ header {
   }
   .press__item img:first-child {
     width: 192px;
-    height: 38px;
   }
   .press__item .text {
     line-height: 24px;
@@ -1159,8 +1293,7 @@ header {
     max-width: 400px;
   }
   .press__item img:first-child {
-    width: 192px;
-    height: 38px;
+    width: auto;
   }
   .item__sub-text {
     margin-bottom: 19px;
@@ -1280,6 +1413,9 @@ header {
   .podcasts__item {
     max-width: 400px;
     padding: 24px 20px 20px 20px;
+  }
+  .text__768px {
+    width: 360px;
   }
   .podcasts__footer {
     column-gap: 8px;
@@ -1553,12 +1689,12 @@ footer {
     margin-bottom: 3px;
   }
 }
-/* !блоки backed и звезда на предпослед секции остались 1200px */
+/* ! и звезда на предпослед секции остались 1200px разместить как есть */
 
-/* ! podcasts верхний блок не дорастягивается, 
-! фото людей съедает. норм ли что перенос не так как на макете help at evr,
-! картинка ready for every proj, 
-!точки all the tools, 
-!input по высоте больше чем кнопка digest 768px */
+/* ! podcasts верхний блок не дорастягивается(на след верстке width auto), 
+! фото людей съедает. норм ли что перенос не так как на макете help at evr(cледующая верстка на 400px),
+!переделать логику help at every step один флекс контейнер остальные элементы сплошным текстом
+! картинка ready for every proj(запрос 400px cжимаю), 
+!точки all the tools, доделать
 
-/* !press нужно ли заморачиваться с размером изображений у каждого свое на 1200 и 768 */
+/* !позиционируем absolute относительно секции press */
