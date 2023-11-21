@@ -861,11 +861,13 @@ header {
   margin-bottom: 70px;
 }
 .help__row {
+  max-width: 903px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   column-gap: 28px;
-  margin-bottom: 20px;
+  row-gap: 20px;
 }
 .help__row img {
   object-fit: none;
@@ -995,7 +997,9 @@ header {
     height: 73px;
   }
   .help__row {
+    max-width: 328px;
     column-gap: 10px;
+    row-gap: 8px;
   }
   .help__row img {
     width: 13px;
@@ -1148,6 +1152,10 @@ header {
     height: 75px;
     padding: 0px 28px;
     border-radius: 16px;
+    min-width: 140px;
+  }
+  .second__row-item img {
+    width: 100%;
   }
   .linear__gradient-left {
     width: 260px;
@@ -1156,6 +1164,39 @@ header {
   .linear__gradient-right {
     width: 260px;
     height: 187px;
+  }
+}
+@media (max-width: 768px) {
+  .backed {
+    margin-bottom: 82px;
+  }
+  .backed__title img {
+    width: 32.998px;
+    height: 25.383px;
+    top: -22px;
+    right: -56px;
+  }
+  .backed__container {
+    margin-top: 24px;
+  }
+  .backed__first-row {
+    gap: 16px;
+  }
+  .first__row-item {
+    height: 58px;
+    padding: 0px 22px;
+    min-width: 98px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+  }
+  .backed__second-row {
+    gap: 16px;
+  }
+  .second__row-item {
+    height: 45px;
+    padding: 0px 17px;
+    border-radius: 8px;
+    min-width: 92px;
   }
 }
 /* press */
@@ -1373,8 +1414,8 @@ header {
   .podcasts__row-left img {
     width: 43.997px;
     height: 39.074px;
-    top: -67px;
-    left: -93px;
+    top: -18px;
+    left: -75px;
   }
   .podcasts__item-container {
     column-gap: 20px;
@@ -1689,12 +1730,15 @@ footer {
     margin-bottom: 3px;
   }
 }
-/* ! и звезда на предпослед секции остались 1200px разместить как есть */
+
+/* !works with до 1200 зажевыввает изображение? */
+/* !backed вторая строчка на 1200 норм? возможно на 768 надо добавить скролл??градиент за краями контейнера */
 
 /* ! podcasts верхний блок не дорастягивается(на след верстке width auto), 
 ! фото людей съедает. норм ли что перенос не так как на макете help at evr(cледующая верстка на 400px),
 !переделать логику help at every step один флекс контейнер остальные элементы сплошным текстом
-! картинка ready for every proj(запрос 400px cжимаю), 
-!точки all the tools, доделать
+/* элементы все равно не встают */
+/* ! картинка ready for every proj(запрос 400px cжимаю),  */
 
 /* !позиционируем absolute относительно секции press */
+/* !burger Довести до ума/ надо ли на 768 позиционировать по середине или сразу задать контейнер? */
