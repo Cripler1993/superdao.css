@@ -10,6 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    ></script>
+    <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="modal__close">
@@ -45,8 +54,54 @@
                 <input type="text" placeholder="login" />
               </div>
               <div class="burger__body">
-                <div class="burger__item">
+                <div class="burger__item" id="firstBurgerItem">
                   <span>product</span><img src="./img/V symbol.svg" alt="" />
+                </div>
+                <div class="burger__item-active hidden">
+                  <div class="burger__item product__active">
+                    <span>product</span
+                    ><img
+                      class="product__img-active"
+                      src="./img/V symbol.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="product__active-item">
+                    <div class="product__active-img">
+                      <img src="./img/productsActive/computer.svg" alt="" />
+                    </div>
+                    <span class="product__active-text">demo</span>
+                  </div>
+                  <div class="product__active-item">
+                    <div class="product__active-img">
+                      <img src="./img/productsActive/line.svg" alt="" />
+                    </div>
+                    <span class="product__active-text">roadMap</span>
+                  </div>
+                  <div class="product__active-item">
+                    <div class="product__active-img">
+                      <img src="./img/productsActive/plus.svg" alt="" />
+                    </div>
+                    <span class="product__active-text">what’s New</span>
+                  </div>
+                  <div class="product__active-item">
+                    <div class="product__active-img">
+                      <img src="./img/productsActive/circles.svg" alt="" />
+                    </div>
+                    <span class="product__active-text">pricing</span>
+                  </div>
+                  <div class="product__active-item">
+                    <div class="product__active-img">
+                      <img src="./img/productsActive/files.svg" alt="" />
+                    </div>
+                    <span class="product__active-text">app store</span>
+                  </div>
+                  <div class="product__active-item">
+                    <div class="product__active-img">
+                      <img src="./img/productsActive/person.svg" alt="" />
+                    </div>
+                    <span class="product__active-text">developers (later)</span>
+                  </div>
                 </div>
                 <div class="burger__item">
                   <span>use cases</span><img src="./img/V symbol.svg" alt="" />
@@ -104,12 +159,14 @@
       <section class="greetings">
         <div class="container">
           <div class="greetings__column">
-            <h1>the easiest way to start a DAO</h1>
-            <p>
+            <h1 id="greet__title">the easiest way to start a DAO</h1>
+            <p id="greet__text">
               an all-in-one platform to start, manage and grow a decentralized
               autonomous organization
             </p>
-            <button>get started</button>
+            <div id="greet__button">
+              <button>get started</button>
+            </div>
           </div>
           <div class="tick"><img src="./img/Frame 5764.png" alt="" /></div>
         </div>
@@ -171,7 +228,9 @@
           <div class="section__column">
             <div class="tools__app-title">
               <img src="./img/bunch of stars3.svg" alt="" />
-              <p class="title__text">all the tools in one app</p>
+              <p class="title__text">
+                <span class="second__block">all the tools</span> in one app
+              </p>
             </div>
             <div class="app__menu">
               <p>nFT membership</p>
@@ -253,7 +312,6 @@
               <img src="./img/help/blond girl.png" alt="" />
               <img src="./img/help/brown haired girl.png" alt="" />
             </div>
-
             <div class="help__row">
               <p>success managers</p>
               <img src="./img/help/aqua blue star.png" alt="" />
@@ -343,66 +401,68 @@
       </section>
       <section class="press">
         <div class="container">
-          <div class="press__title-row">
-            <div class="row__left">
-              <p class="title__text">press</p>
-              <img src="./img/bunch of stars 6.svg" alt="" />
-            </div>
-            <div class="row__right">
-              <p class="text">see all</p>
-              <img src="./img/press/arrow.svg" alt="" />
-            </div>
-          </div>
-          <div class="press__item-container">
-            <div class="press__item" style="background-color: #77e6ff">
-              <div>
-                <img src="./img/press/decrypt.svg" alt="" />
-                <p class="text">
-                  superdao Raises $10.5 Million to Build an 'All-in-One' DAO
-                  Platform
-                </p>
-                <p class="item__sub-text">
-                  superdao aims to make it easier for online communities to
-                  build and launch DAOs
-                </p>
+          <div class="press__change">
+            <div class="press__title-row">
+              <div class="row__left">
+                <p class="title__text">press</p>
+                <img src="./img/bunch of stars 6.svg" alt="" />
               </div>
-              <div class="item__footer">
-                <p>read</p>
-                <img src="./img/press/black arrow.svg" alt="" />
+              <div class="row__right">
+                <p class="text">see all</p>
+                <img src="./img/press/arrow.svg" alt="" />
               </div>
             </div>
-            <div class="press__item" style="background-color: #e2c1f9">
-              <div>
-                <img src="./img/press/blockworks.svg" alt="" />
-                <p class="text">
-                  the Y Combinator of Web3 Attracts Record Number of DAO
-                  Startups
-                </p>
-                <p class="item__sub-text">
-                  dAOs and related startups made up an “overwhelming number of
-                  applicants” for a Web3 accelerator’s cohort this year
-                </p>
+            <div class="press__item-container">
+              <div class="press__item" style="background-color: #77e6ff">
+                <div>
+                  <img src="./img/press/decrypt.svg" alt="" />
+                  <p class="text">
+                    superdao Raises $10.5 Million to Build an 'All-in-One' DAO
+                    Platform
+                  </p>
+                  <p class="item__sub-text">
+                    superdao aims to make it easier for online communities to
+                    build and launch DAOs
+                  </p>
+                </div>
+                <div class="item__footer">
+                  <p>read</p>
+                  <img src="./img/press/black arrow.svg" alt="" />
+                </div>
               </div>
-              <div class="item__footer">
-                <p>read</p>
-                <img src="./img/press/black arrow.svg" alt="" />
+              <div class="press__item" style="background-color: #e2c1f9">
+                <div>
+                  <img src="./img/press/blockworks.svg" alt="" />
+                  <p class="text">
+                    the Y Combinator of Web3 Attracts Record Number of DAO
+                    Startups
+                  </p>
+                  <p class="item__sub-text">
+                    dAOs and related startups made up an “overwhelming number of
+                    applicants” for a Web3 accelerator’s cohort this year
+                  </p>
+                </div>
+                <div class="item__footer">
+                  <p>read</p>
+                  <img src="./img/press/black arrow.svg" alt="" />
+                </div>
               </div>
-            </div>
-            <div class="press__item" style="background-color: #dbe268">
-              <div>
-                <img src="./img/press/tech crunch.svg" alt="" />
-                <p class="text">
-                  vC-backed DAO startups are racing to define what DAOs actually
-                  are
-                </p>
-                <p class="item__sub-text">
-                  not all 'decentralized autonomous organizations' are
-                  autonomous... or decentralized
-                </p>
-              </div>
-              <div class="item__footer">
-                <p>read</p>
-                <img src="./img/press/black arrow.svg" alt="" />
+              <div class="press__item" style="background-color: #dbe268">
+                <div>
+                  <img src="./img/press/tech crunch.svg" alt="" />
+                  <p class="text">
+                    vC-backed DAO startups are racing to define what DAOs
+                    actually are
+                  </p>
+                  <p class="item__sub-text">
+                    not all 'decentralized autonomous organizations' are
+                    autonomous... or decentralized
+                  </p>
+                </div>
+                <div class="item__footer">
+                  <p>read</p>
+                  <img src="./img/press/black arrow.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -410,58 +470,60 @@
       </section>
       <section class="podcasts">
         <div class="container">
-          <div class="podcasts__title-row">
-            <div class="podcasts__row-left">
-              <img src="./img/bunch of stars 7.svg" alt="" />
-              <p class="title__text">podcasts</p>
-            </div>
-            <div class="row__right">
-              <p class="text">see all</p>
-              <img src="./img/press/arrow.svg" alt="" />
-            </div>
-          </div>
-          <div class="podcasts__item-container">
-            <div class="podcasts__item">
-              <div>
-                <img src="./img/podcasts/pomp podcast.svg" alt="" />
-                <p class="text__20px text__768px">
-                  understanding DAOs with Yury Lifshits
-                </p>
-                <p class="podcasts__sub-text">the pomp podcast</p>
-                <p class="podcasts__sub-text">by anthony pompliano</p>
+          <div class="podcasts__change">
+            <div class="podcasts__title-row">
+              <div class="podcasts__row-left">
+                <img src="./img/bunch of stars 7.svg" alt="" />
+                <p class="title__text">podcasts</p>
               </div>
-              <div class="podcasts__footer">
-                <p>listen</p>
-                <img src="./img/podcasts/white arrow.svg" alt="" />
+              <div class="row__right">
+                <p class="text">see all</p>
+                <img src="./img/press/arrow.svg" alt="" />
               </div>
             </div>
-            <div class="podcasts__item">
-              <div>
-                <img src="./img/podcasts/unstopable.svg" alt="" />
-                <p class="text__20px">
-                  Everything You Need to Know About DAOs with Yury Lifshits from
-                  Superdao
-                </p>
-                <p class="podcasts__sub-text">the unstoppable podcast</p>
-                <p class="podcasts__sub-text">by josh gordon</p>
+            <div class="podcasts__item-container">
+              <div class="podcasts__item">
+                <div>
+                  <img src="./img/podcasts/pomp podcast.svg" alt="" />
+                  <p class="text__20px text__768px">
+                    understanding DAOs with Yury Lifshits
+                  </p>
+                  <p class="podcasts__sub-text">the pomp podcast</p>
+                  <p class="podcasts__sub-text">by anthony pompliano</p>
+                </div>
+                <div class="podcasts__footer">
+                  <p>listen</p>
+                  <img src="./img/podcasts/white arrow.svg" alt="" />
+                </div>
               </div>
-              <div class="podcasts__footer">
-                <p>watch</p>
-                <img src="./img/podcasts/white arrow.svg" alt="" />
+              <div class="podcasts__item">
+                <div>
+                  <img src="./img/podcasts/unstopable.svg" alt="" />
+                  <p class="text__20px">
+                    Everything You Need to Know About DAOs with Yury Lifshits
+                    from Superdao
+                  </p>
+                  <p class="podcasts__sub-text">the unstoppable podcast</p>
+                  <p class="podcasts__sub-text">by josh gordon</p>
+                </div>
+                <div class="podcasts__footer">
+                  <p>watch</p>
+                  <img src="./img/podcasts/white arrow.svg" alt="" />
+                </div>
               </div>
-            </div>
-            <div class="podcasts__item">
-              <div>
-                <img src="./img/podcasts/zima.svg" alt="" />
-                <p class="text__20px">
-                  Yury Lifshits - Superdao: The “Shopify” for DAOs
-                </p>
-                <p class="podcasts__sub-text">zima red</p>
-                <p class="podcasts__sub-text">by andrew stainwold</p>
-              </div>
-              <div class="podcasts__footer">
-                <p>listen</p>
-                <img src="./img/podcasts/white arrow.svg" alt="" />
+              <div class="podcasts__item">
+                <div>
+                  <img src="./img/podcasts/zima.svg" alt="" />
+                  <p class="text__20px">
+                    Yury Lifshits - Superdao: The “Shopify” for DAOs
+                  </p>
+                  <p class="podcasts__sub-text">zima red</p>
+                  <p class="podcasts__sub-text">by andrew stainwold</p>
+                </div>
+                <div class="podcasts__footer">
+                  <p>listen</p>
+                  <img src="./img/podcasts/white arrow.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -554,6 +616,5 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
   </body>
 </html>

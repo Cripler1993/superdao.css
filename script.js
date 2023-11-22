@@ -4,6 +4,9 @@ const modalWrapper = document.querySelector(".modal__wrapper");
 const burgerOpen = document.querySelector(".header__burger");
 const burgerClose = document.querySelector(".burger__close");
 const burgerMenu = document.querySelector(".burger__menu");
+const burgerProduct = document.querySelector("#firstBurgerItem");
+const productActive = document.querySelector(".burger__item-active");
+const burgerProductClose = document.querySelector(".product__active");
 
 modalClose.addEventListener("click", function (event) {
   if (event.target == modalOpen) {
@@ -13,15 +16,41 @@ modalClose.addEventListener("click", function (event) {
   }
 });
 
-// burgerOpen.onclick = function () {
-//   burgerMenu.classList.remove("hidden");
-// };
-
 burgerOpen.addEventListener("click", function (event) {
   burgerMenu.classList.remove("hidden");
 });
 burgerClose.addEventListener("click", function (event) {
   burgerMenu.classList.add("hidden");
 });
+burgerProduct.addEventListener("click", function () {
+  productActive.classList.remove("hidden");
+  burgerProduct.classList.add("hidden");
+});
+burgerProductClose.addEventListener("click", function () {
+  productActive.classList.add("hidden");
+  burgerProduct.classList.remove("hidden");
+});
 
-// eventlistner. event(на вход), event.target != modalOpen
+// gsap.from("header", {
+//   duration: 1,
+//   y: "-200%",
+//   ease: "power2.out",
+//   opacity: 0,
+// });
+
+// const timeLine = gsap.timeline({
+//   default: { duration: 1, ease: "elastic" },
+// });
+// timeLine
+//   .from("#greet__title", {
+//     opacity: 0,
+//     y: "100%",
+//   })
+//   .from("#greet__text", {
+//     opacity: 0,
+//     y: "100%",
+//   })
+//   .from("#greet__button", {
+//     opacity: 0,
+//     y: "100%",
+//   });

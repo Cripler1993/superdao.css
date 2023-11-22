@@ -325,9 +325,9 @@ header {
   }
   .burger__column {
     padding: 0px 20px 20px 20px;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    /* align-items: center; */
   }
   .burger__input {
     max-width: 320px;
@@ -363,6 +363,7 @@ header {
     max-width: 320px;
     border-radius: 10px;
     background: #182632;
+    cursor: pointer;
   }
   .burger__item span:first-child {
     color: #fff;
@@ -384,6 +385,49 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  /* active products */
+  .burger__item-active {
+    border-radius: 10px;
+    background: #202c37;
+    max-width: 320px;
+    padding: 16px 16px 20px 20px;
+  }
+  .product__active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #202c37;
+    margin-bottom: 15px;
+  }
+  .product__img-active {
+    transform: rotate(180deg);
+  }
+  .product__active-item {
+    padding: 10px 20px 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16px;
+  }
+  .product__active-img {
+    padding: 5px;
+    border-radius: 7px;
+    background: #2f3c49;
+  }
+  .product__active-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .product__active-text::first-letter {
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    max-width: 360px;
   }
 }
 /* project */
@@ -547,6 +591,11 @@ header {
   .project__results {
     padding: 2px 12px;
     font-size: 13px;
+  }
+}
+@media (max-width: 400px) {
+  .project__img img {
+    max-width: 328px;
   }
 }
 /* full journey */
@@ -849,6 +898,11 @@ header {
     height: 84px;
   }
 }
+@media (max-width: 400px) {
+  .app__img img {
+    max-width: 328px;
+  }
+}
 /* help */
 .help {
   margin-bottom: 214px;
@@ -1014,6 +1068,7 @@ header {
     margin-bottom: 100px;
   }
   .digest__container {
+    background-image: none;
     padding: 28px 24px 24px 24px;
   }
   .digest__text {
@@ -1040,6 +1095,13 @@ header {
     padding: 10px 0px;
     border-radius: 10px;
     font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .photo__row {
+    flex-wrap: wrap;
+    margin-top: 22px;
+    margin-bottom: 22px;
   }
 }
 /* backed */
@@ -1199,6 +1261,16 @@ header {
     min-width: 92px;
   }
 }
+@media (max-width: 400px) {
+  .linear__gradient-left {
+    width: 85px;
+    height: 119px;
+  }
+  .linear__gradient-right {
+    width: 85px;
+    height: 119px;
+  }
+}
 /* press */
 .press {
   margin-bottom: 210px;
@@ -1314,7 +1386,15 @@ header {
 }
 @media (max-width: 768px) {
   .press {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
+  }
+  .press__change {
+    position: relative;
+  }
+  .press__title-row {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
   }
   .row__left img {
     width: 31.839px;
@@ -1322,9 +1402,17 @@ header {
     top: -25px;
     right: -45px;
   }
-  .press__title-row {
-    margin-bottom: 24px;
+  .row__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
+
   .press__item-container {
     flex-direction: column;
     row-gap: 16px;
@@ -1442,10 +1530,21 @@ header {
 }
 @media (max-width: 768px) {
   .podcasts {
-    margin-bottom: 81px;
+    margin-bottom: 121px;
+  }
+  .podcasts__change {
+    position: relative;
   }
   .podcasts__title-row {
+    justify-content: center;
+    align-items: center;
     margin-bottom: 24px;
+  }
+  .podcasts__row-left img {
+    width: 31.996px;
+    height: 28.418px;
+    top: -10px;
+    left: -55px;
   }
   .podcasts__item-container {
     flex-direction: column;
@@ -1464,6 +1563,11 @@ header {
   }
   .podcasts__footer p {
     font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .text__768px {
+    width: auto;
   }
 }
 /* idea */
@@ -1730,15 +1834,22 @@ footer {
     margin-bottom: 3px;
   }
 }
-
+@media (max-width: 400px) {
+  .second__block {
+    display: block;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+}
+/* !digest container не все изображение сзади видно */
 /* !works with до 1200 зажевыввает изображение? */
 /* !backed вторая строчка на 1200 норм? возможно на 768 надо добавить скролл??градиент за краями контейнера */
 
 /* ! podcasts верхний блок не дорастягивается(на след верстке width auto), 
-! фото людей съедает. норм ли что перенос не так как на макете help at evr(cледующая верстка на 400px),
+! норм ли что перенос не так как на макете help at evr(cледующая верстка на 400px),
 !переделать логику help at every step один флекс контейнер остальные элементы сплошным текстом
 /* элементы все равно не встают */
-/* ! картинка ready for every proj(запрос 400px cжимаю),  */
 
-/* !позиционируем absolute относительно секции press */
-/* !burger Довести до ума/ надо ли на 768 позиционировать по середине или сразу задать контейнер? */
+/* !burger проверить, центрирование сжимает весь контент */
+/* !верстка 400 all the tools заголовок встал немгного не ровно
+!фото людей переносятся немного в другом порядке */
