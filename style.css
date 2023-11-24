@@ -199,6 +199,15 @@ header {
 .tick {
   text-align: center;
 }
+.burger__menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #121e28;
+  z-index: 1000;
+}
 @media (max-width: 1200px) {
   header {
     margin-top: 28px;
@@ -300,15 +309,6 @@ header {
   }
 }
 @media (max-width: 768px) {
-  .burger__menu {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: #121e28;
-    z-index: 1;
-  }
   .burger__header {
     padding: 16px 16px 0px 16px;
     display: flex;
@@ -327,7 +327,8 @@ header {
     padding: 0px 20px 20px 20px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    max-width: 360px;
+    margin: 0 auto;
   }
   .burger__input {
     max-width: 320px;
@@ -739,16 +740,18 @@ header {
 }
 .works__with-row {
   display: flex;
-  justify-content: center;
   column-gap: 36px;
 }
 .works__with-item {
-  padding: 10px 29px;
   border-radius: 40px;
   border: 2px solid #2a3744;
   background: #121e28;
+  width: 160px;
+  height: 160px;
 }
-
+.works__with-item img {
+  width: 100%;
+}
 .works__with-text {
   text-align: center;
   text-transform: capitalize;
@@ -888,6 +891,7 @@ header {
     column-gap: 28px;
     row-gap: 28px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .works__with-text {
     font-size: 12px;
@@ -940,7 +944,7 @@ header {
 }
 .digest__container {
   background-image: url(./img/lights.png);
-  object-fit: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #2a37445a;
   text-align: center;
@@ -1055,6 +1059,51 @@ header {
     column-gap: 10px;
     row-gap: 8px;
   }
+  /* order */
+  .help__order-1 {
+    order: -13;
+  }
+  .help__order-2 {
+    order: -12;
+  }
+  .help__order-3 {
+    order: -8;
+  }
+  .help__order-4 {
+    order: -10;
+  }
+  .help__order-5 {
+    order: -9;
+  }
+  .help__order-6 {
+    order: -11;
+  }
+  .help__order-7 {
+    order: -6;
+  }
+  .help__order-8 {
+    order: -7;
+  }
+  .help__order-9 {
+    order: -4;
+    /* ! */
+  }
+  .help__order-10 {
+    order: 0;
+  }
+  .help__order-11 {
+    order: -5;
+  }
+  .help__order-12 {
+    order: -3;
+  }
+  .help__order-13 {
+    display: none;
+  }
+  .help__order-14 {
+    order: 0;
+  }
+  /*  */
   .help__row img {
     width: 13px;
     height: 13px;
@@ -1837,19 +1886,11 @@ footer {
 @media (max-width: 400px) {
   .second__block {
     display: block;
-    text-align: center;
     margin-bottom: 3px;
   }
+  .title__text {
+    text-align: center;
+  }
 }
-/* !digest container не все изображение сзади видно */
-/* !works with до 1200 зажевыввает изображение? */
-/* !backed вторая строчка на 1200 норм? возможно на 768 надо добавить скролл??градиент за краями контейнера */
 
-/* ! podcasts верхний блок не дорастягивается(на след верстке width auto), 
-! норм ли что перенос не так как на макете help at evr(cледующая верстка на 400px),
-!переделать логику help at every step один флекс контейнер остальные элементы сплошным текстом
-/* элементы все равно не встают */
-
-/* !burger проверить, центрирование сжимает весь контент */
-/* !верстка 400 all the tools заголовок встал немгного не ровно
-!фото людей переносятся немного в другом порядке */
+/* для help отрабоать ордер для текста и картинок */

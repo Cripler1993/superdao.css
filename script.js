@@ -31,26 +31,30 @@ burgerProductClose.addEventListener("click", function () {
   burgerProduct.classList.remove("hidden");
 });
 
-// gsap.from("header", {
-//   duration: 1,
-//   y: "-200%",
-//   ease: "power2.out",
-//   opacity: 0,
-// });
+gsap.registerPlugin(ScrollTrigger);
 
-// const timeLine = gsap.timeline({
-//   default: { duration: 1, ease: "elastic" },
-// });
-// timeLine
-//   .from("#greet__title", {
-//     opacity: 0,
-//     y: "100%",
-//   })
-//   .from("#greet__text", {
-//     opacity: 0,
-//     y: "100%",
-//   })
-//   .from("#greet__button", {
-//     opacity: 0,
-//     y: "100%",
-//   });
+const timeLine = gsap.timeline({
+  default: { duration: 1, ease: "elastic" },
+});
+timeLine
+  .from("#greet__title", {
+    opacity: 0,
+    y: "100%",
+  })
+  .from("#greet__text", {
+    opacity: 0,
+    y: "100%",
+  })
+  .from("#greet__button", {
+    opacity: 0,
+    y: "100%",
+  });
+
+gsap.from(".journey__column p", {
+  duration: 1,
+  ease: "elastic",
+  stagger: 0.5,
+  y: "100%",
+  scrollTrigger: ".journey__column",
+  opacity: 0,
+});
