@@ -58,3 +58,80 @@ gsap.from(".journey__column p", {
   scrollTrigger: ".journey__column",
   opacity: 0,
 });
+
+// const newTimeLine = gsap.timeline({
+//   default: {
+//     duration: 1,
+//     ease: "elastic",
+//   },
+// });
+// newTimeLine
+gsap.from("#works__title", {
+  delay: 2,
+  duration: 1,
+  ease: "power1.out",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from(".works__with-text", {
+  delay: 1.5,
+  duration: 1,
+  ease: "power1.out",
+  opacity: 0,
+  y: "100%",
+  scrollTrigger: ".works__with-item",
+});
+gsap.from("#works__item-3", {
+  duration: 0.7,
+  ease: "power1.out",
+  x: "-100%",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from("#works__item-4", {
+  duration: 0.7,
+  ease: "power1.out",
+  x: "100%",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from("#works__item-2", {
+  delay: 0.5,
+  duration: 0.7,
+  ease: "power1.out",
+  x: "-100%",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from("#works__item-5", {
+  delay: 0.5,
+  duration: 0.7,
+  ease: "power1.out",
+  x: "100%",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from("#works__item-1", {
+  delay: 1,
+  duration: 0.7,
+  ease: "power1.out",
+  x: "-100%",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from("#works__item-6", {
+  delay: 1,
+  duration: 0.7,
+  ease: "power1.out",
+  x: "100%",
+  opacity: 0,
+  scrollTrigger: ".works__with-item",
+});
+gsap.from(".press__item", {
+  duration: 1,
+  stagger: 0.5,
+  scale: 0,
+  // xPercent: 50,
+  // rotation: -90,
+  scrollTrigger: ".press__item",
+});
