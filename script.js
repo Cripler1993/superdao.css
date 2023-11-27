@@ -58,6 +58,7 @@ gsap.from(".journey__column p", {
   scrollTrigger: ".journey__column",
   opacity: 0,
 });
+// scrollTrigger после defaults
 
 // const newTimeLine = gsap.timeline({
 //   default: {
@@ -131,7 +132,5 @@ gsap.from(".press__item", {
   duration: 1,
   stagger: 0.5,
   scale: 0,
-  // xPercent: 50,
-  // rotation: -90,
   scrollTrigger: ".press__item",
 });
